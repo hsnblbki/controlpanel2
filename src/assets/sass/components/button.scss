@@ -1,0 +1,60 @@
+.c-btn{
+    font-size:14px;
+    color:$color-content;
+    text-align:center;
+    border-radius:3px;
+    padding:8px 16px;
+    cursor: pointer;
+    display:inline-block;
+    background-color:$color-white;
+    border:1px solid darken($color-white,15%);
+    box-shadow: 0 1px 0 0 rgba(darken($color-primary,30%),0.05);
+
+    &:focus{
+        outline:none;
+        border:2px solid $color-primary;
+    }
+    
+    &:hover{
+        background-color: darken($color-white,3%);
+    }
+}
+
+.c-btn--primary{
+    color:$color-white;
+    background-color:$color-primary;
+    border-color:darken($color-primary,5%);
+
+    &:hover{
+        background-color:darken($color-primary,5%);
+    }
+
+    &:focus{
+        border-color:darken($color-primary,10%)
+    }
+}
+
+.c-btn--destructive{
+    color:$color-white;
+    background-color:$color-red;
+    border-color:darken($color-red,5%);
+
+    &:hover{
+        background-color:darken($color-red,5%);
+    }
+}
+
+.c-btn--ghost{
+    color:$color-content;
+    border-color:$color-content;
+    background-color:transparent;
+
+    &:hover{
+        background-color:transparent;
+    }
+}
+
+.c-btn--slim{
+    padding-top:4px;
+    padding-bottom:4px;
+}
