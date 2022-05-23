@@ -1,0 +1,44 @@
+.c-summary{
+    display:flex;
+    align-items: center;
+    @include e-card;
+    padding:spacing("small") spacing("wide");
+}
+
+.c-summary__data{
+    display:flex;
+    flex-direction: column;
+    margin-left:spacing("normal");
+
+    &:last-child{
+        margin-left:0;
+    }
+}
+
+.c-summary__value{
+    font-family: $family-heading;
+    font-size:28px;
+    font-weight:bold;
+
+    &--positive{
+        color:$color-blue;
+    }
+}
+
+.c-summary__key{
+    font-weight:600;
+}
+
+.c-summary__small{
+    .c-summary__key,.c-summary__value{
+        font-size:13px;
+        font-weight:normal;
+    }
+}
+
+.c-summary__boxless{
+    background:none;
+    box-shadow: none;
+    margin-bottom:0;
+    
+}
