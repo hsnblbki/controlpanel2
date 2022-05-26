@@ -10,8 +10,9 @@ $indicator-size:10px;
 .c-action{
     display:flex;
     align-items:center;
-    padding:spacing("extra-small");
+    padding:(calc(spacing("extra-small")/2)) spacing("extra-small");
     border-bottom:1px solid rgba(darken($color-brand,40%),0.1);
+    flex-wrap:wrap;
 
     &:last-child{
         border-bottom:none;
@@ -19,7 +20,7 @@ $indicator-size:10px;
 }
 
 .c-action__title{
-    font-size:14px;
+    margin-left:auto;
 }
 
 .c-action::before{
@@ -32,6 +33,27 @@ $indicator-size:10px;
     display: block;
 }
 
-.c-action__link{
-    margin-right:auto;
+.c-action__link,.c-action__title{
+    margin-top:calc(spacing("extra-small")/2);
+    margin-bottom:calc(spacing("extra-small")/2);
+}
+
+.c-actions--one-line{
+    .c-action{
+        flex-wrap:nowrap;
+        position: relative;
+        &::before{
+            position: absolute;
+            right:0;
+            top:calc(50% - calc($indicator-size/2));
+            margin-right:5px;
+        }
+    }
+
+    .c-action__title{
+        white-space: nowrap;
+        overflow:hidden;
+        text-overflow: ellipsis;
+        margin-right:15px;
+    }
 }

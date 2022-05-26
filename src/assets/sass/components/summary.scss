@@ -3,6 +3,7 @@
     align-items: center;
     @include e-card;
     padding:spacing("small") spacing("wide");
+    flex-wrap: wrap;
 }
 
 .c-summary__data{
@@ -29,16 +30,20 @@
     font-weight:600;
 }
 
-.c-summary__small{
+.c-summary--small{
     .c-summary__key,.c-summary__value{
         font-size:13px;
         font-weight:normal;
     }
 }
 
-.c-summary__boxless{
+.c-summary--boxless{
     background:none;
     box-shadow: none;
     margin-bottom:0;
     
+}
+
+.c-summary--spaceless{
+    padding-right:0;
 }

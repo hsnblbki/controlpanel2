@@ -20,3 +20,22 @@
     font-size:28px;
     font-family: $family-heading;
 }
+
+@media(max-width:$bp-sidebar){
+    .page-container{
+        padding-right:$dense-width + spacing("small");
+        padding-left:spacing("small");
+    }
+
+    .home-intro{
+        padding:spacing("normal") 0 spacing("wide");
+    }
+
+    .welcome-day{
+        font-size:24px;
+    }
+    
+    .main-page{
+        background:0;
+    }
+}

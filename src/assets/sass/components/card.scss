@@ -4,7 +4,7 @@
     display:flex;
     flex-wrap:wrap;
     align-items:flex-start;
-    padding:spacing("normal");
+    padding:calc(spacing("normal")/2) spacing("normal"); 
 }
 
 .c-card__title{
@@ -13,6 +13,13 @@
     font-size:17px;
     margin-left:spacing();
     color:$color-title-subdued;
+    margin-top:calc(spacing("normal")/2);
+    margin-bottom:calc(spacing("normal")/2);
+}
+
+.c-card__action{
+    margin-top:calc(spacing("normal")/2);
+    margin-bottom:calc(spacing("normal")/2);
 }
 
 .c-card__desc{
@@ -22,10 +29,6 @@
 
 .c-card--no-desc{
     align-items:center;
-    
-    .c-card__title{
-        margin-bottom:0;
-    }
 }
 
 .c-card--no-action{
